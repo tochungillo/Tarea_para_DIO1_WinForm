@@ -33,10 +33,9 @@
             this.paginacionComboBox = new System.Windows.Forms.ComboBox();
             this.productosListView = new System.Windows.Forms.ListView();
             this.requisitosGroupBox = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.FrRadioButton = new System.Windows.Forms.RadioButton();
+            this.disponiblesCheckBox = new System.Windows.Forms.CheckBox();
+            this.frRadioButton = new System.Windows.Forms.RadioButton();
             this.enRadioButton = new System.Windows.Forms.RadioButton();
-            this.filtrosCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.BusquedaComboBox = new System.Windows.Forms.ComboBox();
             this.patronTextBox = new System.Windows.Forms.TextBox();
             this.patronLabel = new System.Windows.Forms.Label();
@@ -91,10 +90,9 @@
             // 
             // requisitosGroupBox
             // 
-            this.requisitosGroupBox.Controls.Add(this.checkBox1);
-            this.requisitosGroupBox.Controls.Add(this.FrRadioButton);
+            this.requisitosGroupBox.Controls.Add(this.disponiblesCheckBox);
+            this.requisitosGroupBox.Controls.Add(this.frRadioButton);
             this.requisitosGroupBox.Controls.Add(this.enRadioButton);
-            this.requisitosGroupBox.Controls.Add(this.filtrosCheckedListBox);
             this.requisitosGroupBox.Controls.Add(this.BusquedaComboBox);
             this.requisitosGroupBox.Controls.Add(this.patronTextBox);
             this.requisitosGroupBox.Controls.Add(this.patronLabel);
@@ -108,26 +106,26 @@
             this.requisitosGroupBox.TabStop = false;
             this.requisitosGroupBox.Text = "Requisitos DI01";
             // 
-            // checkBox1
+            // disponiblesCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(21, 283);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(287, 21);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Productos disponibles (SellEndDate null)";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.disponiblesCheckBox.AutoSize = true;
+            this.disponiblesCheckBox.Location = new System.Drawing.Point(21, 283);
+            this.disponiblesCheckBox.Name = "disponiblesCheckBox";
+            this.disponiblesCheckBox.Size = new System.Drawing.Size(287, 21);
+            this.disponiblesCheckBox.TabIndex = 9;
+            this.disponiblesCheckBox.Text = "Productos disponibles (SellEndDate null)";
+            this.disponiblesCheckBox.UseVisualStyleBackColor = true;
             // 
-            // FrRadioButton
+            // frRadioButton
             // 
-            this.FrRadioButton.AutoSize = true;
-            this.FrRadioButton.Location = new System.Drawing.Point(89, 51);
-            this.FrRadioButton.Name = "FrRadioButton";
-            this.FrRadioButton.Size = new System.Drawing.Size(38, 21);
-            this.FrRadioButton.TabIndex = 8;
-            this.FrRadioButton.TabStop = true;
-            this.FrRadioButton.Text = "fr";
-            this.FrRadioButton.UseVisualStyleBackColor = true;
+            this.frRadioButton.AutoSize = true;
+            this.frRadioButton.Location = new System.Drawing.Point(89, 51);
+            this.frRadioButton.Name = "frRadioButton";
+            this.frRadioButton.Size = new System.Drawing.Size(38, 21);
+            this.frRadioButton.TabIndex = 8;
+            this.frRadioButton.TabStop = true;
+            this.frRadioButton.Text = "fr";
+            this.frRadioButton.UseVisualStyleBackColor = true;
             // 
             // enRadioButton
             // 
@@ -139,16 +137,6 @@
             this.enRadioButton.TabStop = true;
             this.enRadioButton.Text = "en";
             this.enRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // filtrosCheckedListBox
-            // 
-            this.filtrosCheckedListBox.FormattingEnabled = true;
-            this.filtrosCheckedListBox.Items.AddRange(new object[] {
-            "Categoria"});
-            this.filtrosCheckedListBox.Location = new System.Drawing.Point(21, 108);
-            this.filtrosCheckedListBox.Name = "filtrosCheckedListBox";
-            this.filtrosCheckedListBox.Size = new System.Drawing.Size(285, 106);
-            this.filtrosCheckedListBox.TabIndex = 6;
             // 
             // BusquedaComboBox
             // 
@@ -212,6 +200,7 @@
             this.ConsultaButton.TabIndex = 5;
             this.ConsultaButton.Text = "consulta";
             this.ConsultaButton.UseVisualStyleBackColor = true;
+            this.ConsultaButton.Click += new System.EventHandler(this.ConsultaButton_Click);
             // 
             // baseDeDatosComboBox
             // 
@@ -257,14 +246,13 @@
         private System.Windows.Forms.Label busquedaLabel;
         private System.Windows.Forms.Label descripcionLenguajeLabel;
         private System.Windows.Forms.Label filtrosLabel;
-        private System.Windows.Forms.CheckedListBox filtrosCheckedListBox;
         private System.Windows.Forms.ComboBox BusquedaComboBox;
         private System.Windows.Forms.TextBox patronTextBox;
         private System.Windows.Forms.RadioButton enRadioButton;
-        private System.Windows.Forms.RadioButton FrRadioButton;
+        private System.Windows.Forms.RadioButton frRadioButton;
         private System.Windows.Forms.Button ConsultaButton;
         private System.Windows.Forms.ComboBox baseDeDatosComboBox;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox disponiblesCheckBox;
     }
 }
 
